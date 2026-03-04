@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,85 +7,271 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container_main"> 
-        <div class="header"></div>
+    <div class="container_main">
+
+        <!-- HEADER (shared) -->
+        <div class="header">
             <div class="my_pic">
-                <img class="pic_header" src="1743183624980.jpg">
+                <img class="pic_header" src="1743183624980.jpg" alt="Aquiles Lerman">
             </div>
-            <h2> Aquiles Lerman</h2>
+            <h2>Aquiles Lerman</h2>
+            <div class="header-links">
+                <a href="https://www.linkedin.com/in/aquillesf/" target="_blank" class="header-link">LinkedIn</a>
+                <span class="header-sep">·</span>
+                <a href="https://github.com/aquillesf" target="_blank" class="header-link">GitHub</a>
+                <span class="header-sep">·</span>
+                <a href="Aquiles_Lerman_Curriculo.pdf" download class="header-link">Currículo / CV</a>
+            </div>
+            <button class="lang-btn" id="langToggle" onclick="toggleLang()">Switch to English</button>
         </div>
 
         <div class="body_text">
-            <div class="about_me">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Bacharelado em Sistemas de Informação no Departamento de Informática e Estátistica, no centro técnólogico da Universidade Federal de Santa 
-                    Catarina (INE-UFSC).
-                </p>
-                <p>
-                    No momento, estou trabalhando como Desenvolvedor Full Stack na Companhia de Gás de Santa Catarina (SCGÁS). Onde ajudo meu time a deployar aplicações, alterar sites da instituição
-                    e onde lancei meu aplicativo de ramo comercial, o Rota GNV. A SCGÁS é uma das maiores empresas de gás do Brasil.
-                </p>
-                <p>
-                    No momento uso o Debian Linux como S.O pessoal, mas profissionalmente uso Windows 11 e Windows Server 2012.
-                    Eu atualmente trabalho com TypeScript/JavaScript, Node.js e Visual Basic (Já li e refatorei muito código .vb legado), mas também já trabalhei com PHP, C#,
-                    Python e Lua. Como a maioria dos desenvolvedores, eu já programei em CSS e HTML, as principais stacks que utilizei no Front-End foram Bootstrap, React e Angular.
-                    Também já utilizei ferramentar como Docker, Git, BitBucker, GitLab, AWS, Google Cloud, GCP e VirtualBox. Mas o que realmente importa não é o que um programador conhece, e sim sua habilidade de aprender.
-                </p>
-                <p>
-                    Você pode encontrar meu Linkedin aqui: <a href="https://www.linkedin.com/in/aquillesf/">https://www.linkedin.com/in/aquillesf/</a>
-                </p>
-                
+
+            <!-- ══════════════ PORTUGUESE ══════════════ -->
+            <div data-lang="pt" class="active">
+                <div class="about_me">
+                    <h2>Sobre Mim</h2>
+                    <p>
+                        Bacharelado em Sistemas de Informação no Departamento de Informática e Estatística,
+                        no Centro Tecnológico da Universidade Federal de Santa Catarina (INE-UFSC).
+                    </p>
+                    <p>
+                        No momento, estou trabalhando como Desenvolvedor Full Stack na Companhia de Gás de Santa Catarina (SCGÁS),
+                        onde ajudo meu time a fazer o deploy de aplicações, alterar sites da instituição e onde lancei meu aplicativo
+                        de ramo comercial, o <strong>Rota GNV</strong>. A SCGÁS é uma das maiores empresas de gás do Brasil.
+                    </p>
+                    <p>
+                        Atualmente uso o Debian Linux como S.O. pessoal, mas profissionalmente uso Windows 11 e Windows Server 2012.
+                        Trabalho com TypeScript/JavaScript, Node.js e Visual Basic (já li e refatorei muito código .vb legado),
+                        mas também já trabalhei com PHP, C#, Python e Lua. Como a maioria dos desenvolvedores, programei em CSS e HTML;
+                        as principais stacks que utilizei no front-end foram Bootstrap, React e Angular. Também já utilizei ferramentas
+                        como Docker, Git, BitBucket, GitLab, AWS, Google Cloud, GCP e VirtualBox. Mas o que realmente importa não é
+                        o que um programador conhece, e sim sua habilidade de aprender.
+                    </p>
+                </div>
+
                 <div class="Projects">
                     <h1>Projetos</h1>
-                    <ul>
-                        Rota GNV
-                    </ul>
-                    <p>Um aplicativo que ajuda motoristas que abastecem com GNV a encontrar os postos de gasolina mais próximos, com uma comunidade que ajuda a registrar os preços nos postos de gasolina.</p>
-                    <ul>
-                        Ufsc Avalia
-                    </ul>
-                    <p>Website feito para ajudar estudantes de graduação e mestrado a escolher as melhores matérias na Universidade Federal de Santa Catarina.
-                        Os estudantes também podem dar notas e comentários para seus professores, ajudando a comunidade</p>
-                    <ul>
-                        Matrufsc DBS Scrapper
-                    </ul>
-                        <p>Scrapper feito com BeautifulSoup em Python 2.18, ele loga no CAGR da UFSC via sessão Cookies e pega todos os campûs, matérias e professores existentes da UFSC, Carrega em um arquivo XML que é transformado em JSON.</p>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">
+                                <a href="https://play.google.com/store/apps/details?id=com.scgas.rotagnvapp&hl=pt_BR" target="_blank">Rota GNV</a>
+                            </div>
+                            <p class="project-desc">
+                                Um aplicativo que ajuda motoristas que abastecem com GNV a encontrar os postos de gasolina
+                                mais próximos, com uma comunidade que ajuda a registrar os preços nos postos.
+                            </p>
+                        </div>
+                        <div class="project-status">Ativo</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">
+                                <a href="https://ufscavalia.com.br/" target="_blank">UFSC Avalia</a>
+                            </div>
+                            <p class="project-desc">
+                                Website feito para ajudar estudantes de graduação e mestrado a escolher as melhores
+                                matérias na Universidade Federal de Santa Catarina. Os estudantes podem dar notas e
+                                comentários para seus professores, ajudando a comunidade.
+                            </p>
+                        </div>
+                        <div class="project-status">Ativo</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">Matrufsc DBS Scraper</div>
+                            <p class="project-desc">
+                                Scraper feito com BeautifulSoup em Python. Ele faz login no CAGR da UFSC via sessão
+                                com cookies e coleta todos os campi, matérias e professores existentes na UFSC.
+                                Carrega os dados em um arquivo XML que é transformado em JSON.
+                            </p>
+                        </div>
+                        <div class="project-status">Arquivo</div>
+                    </div>
                 </div>
 
                 <div class="Carrer">
                     <h1>Experiência Profissional</h1>
-                    <ul>Estágio, Concept Prime - Janeiro 2023/Junho 2023</ul>
-                    <ul>Concursado como Agente Administrativo, PMSC - Agosto 2023 / Janeiro 2024</ul>
-                    <ul>Desenvolvedor Front-End, Wyntech - Janeiro 2024 / Janeiro 2025</ul>
-                    <ul>Desenvolvedor Full-Stack, SCGÁS - Junho 2025 / Até o Momento</ul>
+                    <ul>
+                        <li>Trainee, Concept Prime — Março 2024 / Maio 2024</li>
+                        <li>Auxiliar Administrativo, Polícia Militar de SC — Outubro 2023 / Abril 2024</li>
+                        <li>Desenvolvedor Front-End, Wyntech — Abril 2024 / Janeiro 2025</li>
+                        <li>Desenvolvedor Mobile e Web Full-Stack, SCGÁS — Abril 2025 / Até o Momento</li>
+                    </ul>
                 </div>
 
                 <div class="Academic">
                     <h1>Formação Acadêmica</h1>
-                    <ul>UFSC - Bacharelado em Sistemas de Informação</ul>
-                    <ul>UFSC - ECL (Embedded Computing Laboratory), Iniciação Científica</ul>
-                    <ul>IFSC - Curso de proficiência em inglês</ul>
-                    <ul>SENAI - Floripa + Tec (Trilha Dev)</ul>
+                    <ul>
+                        <li>UFSC — Bacharelado em Sistemas de Informação (5º Semestre)</li>
+                        <li>UFSC — ECL (Embedded Computing Laboratory), Iniciação Científica — Dezembro 2025 / Atualmente</li>
+                        <li>IFSC — Curso de Proficiência em Inglês (Concluído)</li>
+                        <li>SENAI — Floripa + Tec, Trilha Dev (Concluído)</li>
+                        <li>UFSC / PIAPE — Estatística Descritiva e Exploratória de Dados (Concluído)</li>
+                    </ul>
                 </div>
 
                 <div class="Curiosity">
                     <h1>Informações Adicionais e Curiosidades</h1>
-                    <ul>Fui palestrante na Criptainha de 2025. Minha programação consistia na explicação técnica e cultural da Rede TOR e da DeepWeb.</ul>
-                    <img class="pic_criptainha" src="critpainha.png">
-                    <ul>Participei de alguns eventos da comunidade Python Floripa</ul>
-                    <ul>Fiz 3 anos de aulas de Piano Erudito com o maestro Licoln Thiego</ul>
-                    <ul>Participei da orquestra municipal de Biguaçu</ul>
-                    <ul>Gosto de Jogar Magic the Gathering fins de semana e já participei de alguns torneios no CCG Floripa</ul>
+                    <ul>
+                        <li>Fui palestrante na Criptainha de 2025. Minha apresentação consistiu na explicação técnica e cultural da Rede TOR e da Deep Web.</li>
+                    </ul>
+                    <img class="pic_criptainha" src="critpainha.png" alt="Criptainha 2025">
+                    <ul>
+                        <li>Participei de alguns eventos da comunidade Python Floripa.</li>
+                        <li>Fiz 3 anos de aulas de Piano Erudito com o maestro Lincoln Thiego.</li>
+                        <li>Participei da orquestra municipal de Biguaçu.</li>
+                        <li>Gosto de jogar Magic: The Gathering nos fins de semana e já participei de alguns torneios no CCG Floripa.</li>
+                    </ul>
                 </div>
 
                 <div class="Curriculum">
-                    <p>Se você quiser saber mais, veja meu currículo ou acesse meu Linkedin.</p>
+                    <p>
+                        Se você quiser saber mais, acesse meu
+                        <a href="https://www.linkedin.com/in/aquillesf/" target="_blank">LinkedIn</a>
+                        ou baixe meu <a href="Aquiles_Lerman_Curriculo.pdf" download>currículo em PDF</a>.
+                    </p>
                 </div>
             </div>
+
+            <!-- ══════════════ ENGLISH ══════════════ -->
+            <div data-lang="en">
+                <div class="about_me">
+                    <h2>About Me</h2>
+                    <p>
+                        Bachelor's degree in Information Systems at the Department of Informatics and Statistics,
+                        in the Technology Center of the Federal University of Santa Catarina (INE-UFSC).
+                    </p>
+                    <p>
+                        I currently work as a Full Stack Developer at Companhia de Gás de Santa Catarina (SCGÁS),
+                        where I help my team deploy applications, maintain the company's websites, and where I launched
+                        my commercial app, <strong>Rota GNV</strong>. SCGÁS is one of the largest gas companies in Brazil.
+                    </p>
+                    <p>
+                        I use Debian Linux as my personal OS, but professionally I work with Windows 11 and Windows Server 2012.
+                        My main stack is TypeScript/JavaScript and Node.js, and I've also spent a lot of time reading and
+                        refactoring legacy Visual Basic (.vb) code. I've previously worked with PHP, C#, Python, and Lua.
+                        On the front-end I've used Bootstrap, React, and Angular. I'm also familiar with Docker, Git,
+                        BitBucket, GitLab, AWS, Google Cloud, GCP, and VirtualBox. But what truly matters isn't what a
+                        developer already knows — it's their ability to learn.
+                    </p>
+                </div>
+
+                <div class="Projects">
+                    <h1>Projects</h1>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">
+                                <a href="https://play.google.com/store/apps/details?id=com.scgas.rotagnvapp&hl=pt_BR" target="_blank">Rota GNV</a>
+                            </div>
+                            <p class="project-desc">
+                                An app that helps CNG-powered drivers find the nearest gas stations,
+                                with a community-driven feature for reporting and tracking fuel prices.
+                            </p>
+                        </div>
+                        <div class="project-status">Active</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">
+                                <a href="https://ufscavalia.com.br/" target="_blank">UFSC Avalia</a>
+                            </div>
+                            <p class="project-desc">
+                                A website built to help undergraduate and graduate students choose the best courses
+                                at the Federal University of Santa Catarina. Students can rate and review professors
+                                to help the wider community.
+                            </p>
+                        </div>
+                        <div class="project-status">Active</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-left">
+                            <div class="project-name">Matrufsc DBS Scraper</div>
+                            <p class="project-desc">
+                                A scraper built with BeautifulSoup in Python. It logs into UFSC's CAGR system
+                                via cookie session and collects all campuses, courses, and professors available.
+                                Data is exported to XML and then converted to JSON.
+                            </p>
+                        </div>
+                        <div class="project-status">Archive</div>
+                    </div>
+                </div>
+
+                <div class="Carrer">
+                    <h1>Work Experience</h1>
+                    <ul>
+                        <li>Trainee Developer, Concept Prime — March 2024 / May 2024</li>
+                        <li>Administrative Assistant, Military Police of SC — October 2023 / April 2024</li>
+                        <li>Front-End Developer, Wyntech — April 2024 / January 2025</li>
+                        <li>Mobile & Web Full-Stack Developer, SCGÁS — April 2025 / Present</li>
+                    </ul>
+                </div>
+
+                <div class="Academic">
+                    <h1>Education</h1>
+                    <ul>
+                        <li>UFSC — Bachelor's in Information Systems (5th Semester)</li>
+                        <li>UFSC — ECL (Embedded Computing Laboratory), Scientific Initiation — December 2025 / Present</li>
+                        <li>IFSC — English Proficiency Course (Completed)</li>
+                        <li>SENAI — Floripa + Tec, Dev Track (Completed)</li>
+                        <li>UFSC / PIAPE — Descriptive and Exploratory Data Statistics (Completed)</li>
+                    </ul>
+                </div>
+
+                <div class="Curiosity">
+                    <h1>Additional Info &amp; Fun Facts</h1>
+                    <ul>
+                        <li>I was a speaker at Criptainha 2025, presenting a technical and cultural overview of the TOR Network and the Deep Web.</li>
+                    </ul>
+                    <img class="pic_criptainha" src="critpainha.png" alt="Criptainha 2025">
+                    <ul>
+                        <li>Attended several events of the Python Floripa community.</li>
+                        <li>Took 3 years of classical piano lessons with maestro Lincoln Thiego.</li>
+                        <li>Played in the municipal orchestra of Biguaçu.</li>
+                        <li>I enjoy playing Magic: The Gathering on weekends and have competed in tournaments at CCG Floripa.</li>
+                    </ul>
+                </div>
+
+                <div class="Curriculum">
+                    <p>
+                        Want to know more? Check out my
+                        <a href="https://www.linkedin.com/in/aquillesf/" target="_blank">LinkedIn</a>
+                        or download my <a href="Aquiles_Lerman_Curriculo.pdf" download>CV (PDF)</a>.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
 
+    <script>
+        let currentLang = 'pt';
 
+        function toggleLang() {
+            const ptEl = document.querySelector('[data-lang="pt"]');
+            const enEl = document.querySelector('[data-lang="en"]');
+            const btn = document.getElementById('langToggle');
+
+            if (currentLang === 'pt') {
+                ptEl.classList.remove('active');
+                enEl.classList.add('active');
+                btn.textContent = 'Mudar para Português';
+                document.documentElement.lang = 'en';
+                currentLang = 'en';
+            } else {
+                enEl.classList.remove('active');
+                ptEl.classList.add('active');
+                btn.textContent = 'Switch to English';
+                document.documentElement.lang = 'pt-BR';
+                currentLang = 'pt';
+            }
+        }
+    </script>
 </body>
 </html>
